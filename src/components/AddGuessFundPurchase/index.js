@@ -45,7 +45,7 @@ const AddGuessFundPurchase = ({ setPurchases, purchases, purchase, funds }) => {
           )
         }
       />
-      <Tooltip title="Fon maliyeti * fon adedi yani kaç para harcadığınızı girmelisiniz.">
+      <Tooltip title="Fon maliyeti * fon adedi yani kaç para harcadığınızı girmelisiniz. Küsüratlar nokta ile girilmeli.">
         <CostPicker
           placeholder="Maliyet giriniz"
           bordered={false}
