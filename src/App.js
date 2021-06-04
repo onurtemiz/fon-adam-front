@@ -46,7 +46,6 @@ function App() {
     <ThemeProvider theme={themeMode}>
       <Normalize />
       <GlobalStyle />
-
       <Switch>
         <Route path="/login" component={LoginDetail} />
         <Route path="/signup" component={SignupDetail} />
