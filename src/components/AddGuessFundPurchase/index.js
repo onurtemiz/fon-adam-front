@@ -1,0 +1,69 @@
+import React, { useEffect } from 'react';
+import { useState } from 'react';
+import AddNewFundStyles, { CostPicker, PiecesPicker } from './styles';
+import { FundAutoComplete } from '@components';
+import { X } from '@styled-icons/boxicons-regular';
+
+const AddGuessFundPurchase = ({ setPurchases, purchases, purchase, funds }) => {
+  const [fund, setFund] = useState();
+
+  useEffect(() => {
+    setPurchases([
+      ...purchases.map((p) => (p._id === purchase._id ? purchase : p)),
+    ]);
+  }, [purchase]);
+
+  useEffect(() => {
+    if (fund) {
+      setPurchases([
+        ...purchases.map((p) =>
+          p._id === purchase._id ? { ...purchase, fund: fund._id } : p
+        ),
+      ]);
+    }
+  }, [fund]);
+
+  if (funds.length === 0) {
+    return null;
+  }
+
+  return (
+    <AddNewFundStyles>
+      <FundAutoComplete funds={funds} setFund={setFund} />
+
+      <PiecesPicker
+        placeholder="Adet giriniz"
+        bordered={false}
+        onChange={(e) =>
+          setPurchases(
+            purchases.map((p) =>
+              p._id === purchase._id
+                ? { ...purchase, pieces: e.target.value }
+                : p
+            )
+          )
+        }
+      />
+      <CostPicker
+        placeholder="Maliyet giriniz"
+        bordered={false}
+        onChange={(e) =>
+          setPurchases(
+            purchases.map((p) =>
+              p._id === purchase._id ? { ...purchase, cost: e.target.value } : p
+            )
+          )
+        }
+      />
+
+      <X
+        className="action-icon"
+        onClick={() =>
+          setPurchases(purchases.filter((p) => p._id !== purchase._id))
+        }
+      />
+    </AddNewFundStyles>
+  );
+};
+
+export default AddGuessFundPurchase;

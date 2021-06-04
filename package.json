@@ -1,0 +1,62 @@
+{
+  "name": "fon-adam",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://www.fonadam.com/",
+  "dependencies": {
+    "@ant-design/charts": "^1.1.1",
+    "@ant-design/icons": "^4.6.2",
+    "@craco/craco": "^6.1.2",
+    "@fontsource/ibm-plex-sans": "^4.2.2",
+    "@fontsource/roboto": "^4.2.3",
+    "@styled-icons/boxicons-logos": "^10.23.0",
+    "@styled-icons/boxicons-regular": "^10.23.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "antd": "^4.15.0",
+    "axios": "^0.21.1",
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
+    "firebase": "^8.4.1",
+    "lodash": "^4.17.21",
+    "mixpanel-browser": "^2.41.0",
+    "moment": "^2.29.1",
+    "query-string": "^7.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.3",
+    "react-responsive": "^8.2.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^5.2.1",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "CI=false craco build",
+    "test": "craco test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
