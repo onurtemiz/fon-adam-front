@@ -3,6 +3,7 @@ import { useState } from 'react';
 import AddNewFundStyles, { CostPicker, PiecesPicker } from './styles';
 import { FundAutoComplete } from '@components';
 import { X } from '@styled-icons/boxicons-regular';
+import { Tooltip } from 'antd';
 
 const AddGuessFundPurchase = ({ setPurchases, purchases, purchase, funds }) => {
   const [fund, setFund] = useState();
@@ -44,17 +45,21 @@ const AddGuessFundPurchase = ({ setPurchases, purchases, purchase, funds }) => {
           )
         }
       />
-      <CostPicker
-        placeholder="Maliyet giriniz"
-        bordered={false}
-        onChange={(e) =>
-          setPurchases(
-            purchases.map((p) =>
-              p._id === purchase._id ? { ...purchase, cost: e.target.value } : p
+      <Tooltip title="Fon maliyeti * fon adedi yani kaç para harcadığınızı girmelisiniz.">
+        <CostPicker
+          placeholder="Maliyet giriniz"
+          bordered={false}
+          onChange={(e) =>
+            setPurchases(
+              purchases.map((p) =>
+                p._id === purchase._id
+                  ? { ...purchase, cost: e.target.value }
+                  : p
+              )
             )
-          )
-        }
-      />
+          }
+        />
+      </Tooltip>
 
       <X
         className="action-icon"
