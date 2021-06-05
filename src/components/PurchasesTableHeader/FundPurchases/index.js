@@ -187,7 +187,7 @@ const FundPurchases = () => {
             onClick={() => addAll()}
             loading={loading}
           >
-            Hepsini ekle
+            Portföye Ekle
           </StyledButton>
         )}
       </ButtonWrapper>
