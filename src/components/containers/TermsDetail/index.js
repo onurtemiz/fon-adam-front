@@ -200,7 +200,7 @@ const PrivacyDetail = () => {
           </li>
           <li>
             KULLANICI ürün ve hizmetlerle ilgili şikayet ve itirazlarını hızlı
-            sonuçlandırabilmek açısından sitede yer alan iletisim@fonadam.com
+            sonuçlandırabilmek açısından sitede yer alan iletisim@bouncim.com
             e-mail adresinden iletebilir. Bu yolla İtiraz ve şikayetlerin daha
             hızlı sonuçlanması sağlanmış olacaktır. Bununla birlikte itiraz ve
             şikayetin sonuçsuz kalması halinde bireysel müşteriler Tüketicinin

@@ -66,7 +66,7 @@ const FooterContainer = () => {
           <Contact>
             İletişim:{' '}
             <b>
-              <a href="mailto:iletisim@fonadam.com">iletisim@fonadam.com</a>
+              <a href="mailto:iletisim@bouncim.com">iletisim@bouncim.com</a>
             </b>
           </Contact>
         </LeftSide>
